@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="Talk is cheap, show me the code">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="缓存概念缓存穿透缓存穿透是指攻击者不断发起查询缓存和数据库中都没有的数据，导致压力全部落在数据库，导致数据库压力过大。 解决方案： 接口层增加校验，如用户鉴权校验，id做基础校验，id&amp;lt;=0的直接拦截； 从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反">
+<meta name="keywords" content="cache,redis,memcached,缓存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="缓存简单介绍">
+<meta property="og:url" content="http://yoursite.com/2019/07/19/cachedesc/index.html">
 <meta property="og:site_name" content="Smart_咚咚">
-<meta property="og:description" content="Talk is cheap, show me the code">
+<meta property="og:description" content="缓存概念缓存穿透缓存穿透是指攻击者不断发起查询缓存和数据库中都没有的数据，导致压力全部落在数据库，导致数据库压力过大。 解决方案： 接口层增加校验，如用户鉴权校验，id做基础校验，id&amp;lt;=0的直接拦截； 从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-19T07:55:43.000Z">
+<meta property="og:updated_time" content="2019-07-19T08:57:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Talk is cheap, show me the code">
+<meta name="twitter:title" content="缓存简单介绍">
+<meta name="twitter:description" content="缓存概念缓存穿透缓存穿透是指攻击者不断发起查询缓存和数据库中都没有的数据，导致压力全部落在数据库，导致数据库压力过大。 解决方案： 接口层增加校验，如用户鉴权校验，id做基础校验，id&amp;lt;=0的直接拦截； 从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/19/cachedesc/">
 
 
 
@@ -125,7 +125,7 @@
 </script>
 
   
-  <title>tags | Smart_咚咚</title>
+  <title>缓存简单介绍 | Smart_咚咚</title>
   
 
 
@@ -247,7 +247,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -352,120 +352,319 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/cachedesc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Smart_咚咚">
+      <meta itemprop="description" content="Talk is cheap, show me the code">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smart_咚咚">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h1 class="post-title" itemprop="name headline">缓存简单介绍
+
               
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              目前共计 9 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              
-                <a href="/tags/Freemarker/" style="font-size: 12px; color: #ccc">Freemarker</a> <a href="/tags/Spring-bean/" style="font-size: 12px; color: #ccc">Spring bean</a> <a href="/tags/Velocity/" style="font-size: 12px; color: #ccc">Velocity</a> <a href="/tags/cache/" style="font-size: 12px; color: #ccc">cache</a> <a href="/tags/linux/" style="font-size: 12px; color: #ccc">linux</a> <a href="/tags/memcached/" style="font-size: 12px; color: #ccc">memcached</a> <a href="/tags/redis/" style="font-size: 12px; color: #ccc">redis</a> <a href="/tags/模板渲染/" style="font-size: 30px; color: #111">模板渲染</a> <a href="/tags/缓存/" style="font-size: 12px; color: #ccc">缓存</a>
-              
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-19 16:31:06 / 修改时间：16:57:46" itemprop="dateCreated datePublished" datetime="2019-07-19T16:31:06+08:00">2019-07-19</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/缓存/" itemprop="url" rel="index"><span itemprop="name">缓存</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="缓存概念"><a href="#缓存概念" class="headerlink" title="缓存概念"></a>缓存概念</h2><h3 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h3><p>缓存穿透是指攻击者不断发起查询缓存和数据库中都没有的数据，导致压力全部落在数据库，导致数据库压力过大。</p>
+<h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><ul>
+<li>接口层增加校验，如用户鉴权校验，id做基础校验，id&lt;=0的直接拦截；</li>
+<li>从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反复用同一个id暴力攻击。  </li>
+</ul>
+<h3 id="缓存击穿"><a href="#缓存击穿" class="headerlink" title="缓存击穿"></a>缓存击穿</h3><p>缓存击穿是指缓存中没有但数据库中有的数据（一般是缓存时间到期），这时由于并发用户特别多，同时读缓存没读到数据，又同时去数据库去取数据，引起数据库压力瞬间增大，造成过大压力。</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li>设置热点数据永远不过期。</li>
+<li>读数据库时加互斥锁，写入缓存，其他等待线程就可以从缓存读取  </li>
+</ul>
+<h3 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h3><p>缓存雪崩是指缓存中数据大批量到过期时间，而查询数据量巨大，引起数据库压力过大甚至down机。和缓存击穿不同的是，缓存击穿指并发查同一条数据，缓存雪崩是不同数据都过期了，很多数据都查不到从而查数据库。</p>
+<h4 id="解决方案：-1"><a href="#解决方案：-1" class="headerlink" title="解决方案："></a>解决方案：</h4><ul>
+<li>缓存数据的过期时间设置随机，防止同一时间大量数据过期现象发生。</li>
+<li>如果缓存数据库是分布式部署，将热点数据均匀分布在不同搞得缓存数据库中。</li>
+<li>设置热点数据永远不过期。</li>
+</ul>
+<h2 id="内存缓存框架"><a href="#内存缓存框架" class="headerlink" title="内存缓存框架"></a>内存缓存框架</h2><table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>ConcurrentHashMap</th>
+<th>LRUMap</th>
+<th>Ehcache</th>
+<th>Guava Cache</th>
+<th>Caffeine</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>读写性能</td>
+<td>很好，分段锁</td>
+<td>一般，全局加锁</td>
+<td>好</td>
+<td>好，需要做淘汰操作</td>
+<td>很好</td>
+</tr>
+<tr>
+<td>淘汰算法</td>
+<td>无</td>
+<td>LRU，一般</td>
+<td>支持多种淘汰算法,LRU,LFU,FIFO</td>
+<td>LRU，一般</td>
+<td>W-TinyLFU, 很好</td>
+</tr>
+<tr>
+<td>功能丰富程度</td>
+<td>功能比较简单</td>
+<td>功能比较单一</td>
+<td>功能很丰富</td>
+<td>功能很丰富，支持刷新和虚引用等</td>
+<td>功能和Guava Cache类似</td>
+</tr>
+<tr>
+<td>工具大小</td>
+<td>jdk自带类，很小</td>
+<td>基于LinkedHashMap，较小</td>
+<td>很大，最新版本1.4MB</td>
+<td>是Guava工具类中的一个小部分，较小</td>
+<td>一般，最新版本644KB</td>
+</tr>
+<tr>
+<td>是否持久化</td>
+<td>否</td>
+<td>否</td>
+<td>是</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>是否支持集群</td>
+<td>否</td>
+<td>否</td>
+<td>是</td>
+<td>否</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<ul>
+<li>对于ConcurrentHashMap来说，比较适合缓存比较固定不变的元素，且缓存的数量较小的。虽然从上面表格中比起来有点逊色，但是其由于是jdk自带的类，在各种框架中依然有大量的使用,比如我们可以用来缓存我们反射的Method,Field等等;也可以缓存一些链接，防止其重复建立。在Caffeine中也是使用的ConcurrentHashMap来存储元素。</li>
+<li>对于LRUMap来说，如果不想引入第三方包，又想使用淘汰算法淘汰数据，可以使用这个。</li>
+<li>对于Ehcache来说，由于其jar包很大，较重量级。对于需要持久化和集群的一些功能的，可以选择Ehcache。笔者没怎么使用过这个缓存，如果要选择的话，可以选择分布式缓存来替代Ehcache。</li>
+<li>对于Guava Cache来说，Guava这个jar包在很多Java应用程序中都有大量的引入，所以很多时候其实是直接用就好了，并且其本身是轻量级的而且功能较为丰富，在不了解Caffeine的情况下可以选择Guava Cache。  </li>
+</ul>
+<p>总结一下:如果不需要淘汰算法则选择ConcurrentHashMap，如果需要淘汰算法和一些丰富的API，这里推荐选择Caffeine。</p>
+<h2 id="分布式缓存框架"><a href="#分布式缓存框架" class="headerlink" title="分布式缓存框架"></a>分布式缓存框架</h2><p>这里选取比较出名的分布式缓存来作为比较，Memcached，Redis. 不同的分布式缓存功能特性和实现原理方面有很大的差异，因此他们所适应的场景也有所不同。  </p>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>Memcached</th>
+<th>Redis</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据结构</td>
+<td>只支持简单的Key-Value结构</td>
+<td>String,Hash, List, Set, Sorted Set</td>
+</tr>
+<tr>
+<td>持久化</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>容量大小</td>
+<td>数据纯内存，数据存储不宜过多</td>
+<td>数据全内存，资源成本考量不宜超过100GB</td>
+</tr>
+<tr>
+<td>读写性能</td>
+<td>很高</td>
+<td>很高(RT0.5ms左右)</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Memcached：其吞吐量较大，但是支持的数据结构较少，并且不支持持久化。</li>
+<li>Redis:支持丰富的数据结构，读写性能很高，但是数据全内存，必须要考虑资源成本，支持持久化。  </li>
+</ul>
+<p>总结:如果服务对延迟比较敏感，Map/Set数据也比较多的话，比较适合Redis。</p>
+
       
     </div>
-    
-
-
 
     
+
+    
+      
+    
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/cache/" rel="tag"># cache</a>
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
+          
+            <a href="/tags/memcached/" rel="tag"># memcached</a>
+          
+            <a href="/tags/缓存/" rel="tag"># 缓存</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/19/springbean/" rel="next" title="Spring Bean 生命周期">
+                <i class="fa fa-chevron-left"></i> Spring Bean 生命周期
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -494,8 +693,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -632,6 +840,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存概念"><span class="nav-number">1.</span> <span class="nav-text">缓存概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存穿透"><span class="nav-number">1.1.</span> <span class="nav-text">缓存穿透</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案："><span class="nav-number">1.1.1.</span> <span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存击穿"><span class="nav-number">1.2.</span> <span class="nav-text">缓存击穿</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">1.2.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存雪崩"><span class="nav-number">1.3.</span> <span class="nav-text">缓存雪崩</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案：-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">解决方案：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存缓存框架"><span class="nav-number">2.</span> <span class="nav-text">内存缓存框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式缓存框架"><span class="nav-number">3.</span> <span class="nav-text">分布式缓存框架</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
