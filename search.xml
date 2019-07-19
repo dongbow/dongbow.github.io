@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[模板渲染 - Freemarker]]></title>
+    <url>%2F2019%2F07%2F19%2Ffreemarker%2F</url>
+    <content type="text"><![CDATA[模板引擎除了去做后端应用的页面渲染，很多时候也可以用来生成一些代码，例如利用sql生成pojo对象，生成模板页面等这里简单记录一下FreeMarker渲染模板时最基本的代码 引入FreeMarker Maven信息 12345&lt;dependency&gt; &lt;groupId&gt;org.freemarker&lt;/groupId&gt; &lt;artifactId&gt;freemarker&lt;/artifactId&gt; &lt;version&gt;2.3.26-incubating&lt;/version&gt;&lt;/dependency&gt; 实现代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960import com.google.common.base.Charsets;import com.github.pdf.tools.exception.FreeMarkerException;import freemarker.cache.FileTemplateLoader;import freemarker.template.Configuration;import freemarker.template.Template;import freemarker.template.TemplateExceptionHandler;import java.io.File;import java.io.IOException;import java.io.StringWriter;import java.util.Map;import java.util.concurrent.ConcurrentHashMap;/** * @author wangdongbo * @since 2019/7/3. */public class FreeMarkerTemplate extends AbstractTemplate &#123; private static Map&lt;String, FileTemplateLoader&gt; FILE_TEMPLATE_LOADER_CACHE = new ConcurrentHashMap&lt;&gt;(16); private static Map&lt;String, Configuration&gt; CONFIGURATION_CACHE = new ConcurrentHashMap&lt;&gt;(16); private static Configuration getConfiguration(String templatePath) &#123; if (CONFIGURATION_CACHE.get(templatePath) != null) &#123; return CONFIGURATION_CACHE.get(templatePath); &#125; Configuration config = new Configuration(Configuration.VERSION_2_3_25); config.setDefaultEncoding(Charsets.UTF_8.toString()); config.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER); config.setLogTemplateExceptions(false); FileTemplateLoader fileTemplateLoader; try &#123; if (FILE_TEMPLATE_LOADER_CACHE.containsKey(templatePath)) &#123; fileTemplateLoader = FILE_TEMPLATE_LOADER_CACHE.get(templatePath); &#125; else &#123; fileTemplateLoader = new FileTemplateLoader(new File(templatePath)); &#125; &#125; catch (IOException e) &#123; throw new FreeMarkerException("fileTemplateLoader init error!", e); &#125; config.setTemplateLoader(fileTemplateLoader); CONFIGURATION_CACHE.put(templatePath, config); return config; &#125; @Override protected String getContent(String templatePath, String templateName, Object data) &#123; try &#123; Template template = getConfiguration(templatePath).getTemplate(templateName); StringWriter writer = new StringWriter(); template.process(data, writer); writer.flush(); return writer.toString(); &#125; catch (Exception ex) &#123; throw new FreeMarkerException("FreeMarkerUtil process fail", ex); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>模板渲染</category>
+      </categories>
+      <tags>
+        <tag>模板渲染</tag>
+        <tag>Freemarker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[模板渲染 - Velocity]]></title>
+    <url>%2F2019%2F07%2F19%2Fvelocity%2F</url>
+    <content type="text"><![CDATA[模板引擎除了去做后端应用的页面渲染，很多时候也可以用来生成一些代码，例如利用sql生成pojo对象，生成模板页面等这里简单记录一下Velocity渲染模板时最基本的代码 引入Velocity Maven信息 12345678910&lt;dependency&gt; &lt;groupId&gt;org.apache.velocity&lt;/groupId&gt; &lt;artifactId&gt;velocity&lt;/artifactId&gt; &lt;version&gt;1.7&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;org.apache.velocity&lt;/groupId&gt; &lt;artifactId&gt;velocity-tools&lt;/artifactId&gt; &lt;version&gt;2.0&lt;/version&gt;&lt;/dependency&gt; 实现代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051import com.google.common.base.Charsets;import com.google.common.collect.Maps;import com.github.pdf.tools.exception.VelocityException;import net.sf.cglib.beans.BeanMap;import org.apache.velocity.Template;import org.apache.velocity.VelocityContext;import org.apache.velocity.app.Velocity;import org.apache.velocity.app.VelocityEngine;import java.io.StringWriter;import java.util.Collections;import java.util.Map;import java.util.Objects;import java.util.Properties;import java.util.concurrent.ConcurrentHashMap;/** * @author wangdongbo * @since 2019/7/3. */public class VelocityTemplate extends AbstractTemplate &#123; private static final Map&lt;String, VelocityEngine&gt; ENGINE_MAP = new ConcurrentHashMap&lt;&gt;(16); private static VelocityEngine getEngine(String templatePath) &#123; if (ENGINE_MAP.containsKey(templatePath)) &#123; return ENGINE_MAP.get(templatePath); &#125; Properties properties = new Properties(); properties.setProperty(Velocity.OUTPUT_ENCODING, Charsets.UTF_8.toString()); properties.setProperty(Velocity.INPUT_ENCODING, Charsets.UTF_8.toString()); properties.setProperty(Velocity.FILE_RESOURCE_LOADER_PATH, templatePath); VelocityEngine velocityEngine = new VelocityEngine(properties); ENGINE_MAP.put(templatePath, velocityEngine); return velocityEngine; &#125; @Override protected String getContent(String templatePath, String templateName, Object data) &#123; try &#123; VelocityContext velocityContext = new VelocityContext(Objects.nonNull(data) ? Maps.newHashMap(BeanMap.create(data)) : Collections.emptyMap()); Template template = getEngine(templatePath).getTemplate(templateName, Charsets.UTF_8.toString()); StringWriter writer = new StringWriter(); template.merge(velocityContext, writer); writer.flush(); return writer.toString(); &#125; catch (Exception e) &#123; throw new VelocityException("Velocity exception", e); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>模板渲染</category>
+      </categories>
+      <tags>
+        <tag>模板渲染</tag>
+        <tag>Velocity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux]]></title>
     <url>%2F2019%2F07%2F19%2Flinux%2F</url>
     <content type="text"><![CDATA[1grep | zgrep]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-19T07:18:28.000Z</updated>
+  <updated>2019-07-19T07:45:30.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模板渲染 - Freemarker</title>
+    <link href="http://yoursite.com/2019/07/19/freemarker/"/>
+    <id>http://yoursite.com/2019/07/19/freemarker/</id>
+    <published>2019-07-19T07:32:44.000Z</published>
+    <updated>2019-07-19T07:45:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;模板引擎除了去做后端应用的页面渲染，很多时候也可以用来生成一些代码，例如利用sql生成pojo对象，生成模板页面等&lt;br&gt;这里简单记录一下FreeMarker渲染模板时最基本的代码  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;引入FreeMarker
+        
+      
+    
+    </summary>
+    
+      <category term="模板渲染" scheme="http://yoursite.com/categories/%E6%A8%A1%E6%9D%BF%E6%B8%B2%E6%9F%93/"/>
+    
+    
+      <category term="模板渲染" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%9D%BF%E6%B8%B2%E6%9F%93/"/>
+    
+      <category term="Freemarker" scheme="http://yoursite.com/tags/Freemarker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模板渲染 - Velocity</title>
+    <link href="http://yoursite.com/2019/07/19/velocity/"/>
+    <id>http://yoursite.com/2019/07/19/velocity/</id>
+    <published>2019-07-19T07:32:44.000Z</published>
+    <updated>2019-07-19T07:45:18.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;模板引擎除了去做后端应用的页面渲染，很多时候也可以用来生成一些代码，例如利用sql生成pojo对象，生成模板页面等&lt;br&gt;这里简单记录一下Velocity渲染模板时最基本的代码  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;引入Velocity
+        
+      
+    
+    </summary>
+    
+      <category term="模板渲染" scheme="http://yoursite.com/categories/%E6%A8%A1%E6%9D%BF%E6%B8%B2%E6%9F%93/"/>
+    
+    
+      <category term="模板渲染" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%9D%BF%E6%B8%B2%E6%9F%93/"/>
+    
+      <category term="Velocity" scheme="http://yoursite.com/tags/Velocity/"/>
+    
+  </entry>
   
   <entry>
     <title>linux</title>
