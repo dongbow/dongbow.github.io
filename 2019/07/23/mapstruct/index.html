@@ -98,18 +98,32 @@
   };
 </script>
 
-  <meta name="description" content="1grep | zgrep">
-<meta name="keywords" content="linux">
+  <meta name="description" content="简介mapstrct是一个很好注释处理的框架，解决繁琐domain之间值的转换，节约开发的时间，同时相对应copyProperty的好处是没有使用反射技术，使性能更优。mapstrut一共两个主要的包，org.mapstruct.mapstruct包含里面常用的注释，org.mapstruct.mapstruct-processor处理注释的实现。 官方文档文档传送门 API &amp;amp; 使用MA">
+<meta name="keywords" content="mapstruct">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux">
-<meta property="og:url" content="https://dongbow.github.io/2019/07/19/linux/index.html">
+<meta property="og:title" content="mapstruct简介和使用">
+<meta property="og:url" content="https://dongbow.github.io/2019/07/23/mapstruct/index.html">
 <meta property="og:site_name" content="Smart_咚咚">
-<meta property="og:description" content="1grep | zgrep">
+<meta property="og:description" content="简介mapstrct是一个很好注释处理的框架，解决繁琐domain之间值的转换，节约开发的时间，同时相对应copyProperty的好处是没有使用反射技术，使性能更优。mapstrut一共两个主要的包，org.mapstruct.mapstruct包含里面常用的注释，org.mapstruct.mapstruct-processor处理注释的实现。 官方文档文档传送门 API &amp;amp; 使用MA">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-19T07:18:28.000Z">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8bean.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8Bbean.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2mapper.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89+%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%AE%9A%E4%B9%89+%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E9%9D%9Ebean%E7%9A%84%E6%98%A0%E5%B0%84.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/updateInstanceMethod.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/updateInstance.jpg">
+<meta property="og:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/updateTest.jpg">
+<meta property="og:updated_time" content="2019-07-23T15:08:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux">
-<meta name="twitter:description" content="1grep | zgrep">
+<meta name="twitter:title" content="mapstruct简介和使用">
+<meta name="twitter:description" content="简介mapstrct是一个很好注释处理的框架，解决繁琐domain之间值的转换，节约开发的时间，同时相对应copyProperty的好处是没有使用反射技术，使性能更优。mapstrut一共两个主要的包，org.mapstruct.mapstruct包含里面常用的注释，org.mapstruct.mapstruct-processor处理注释的实现。 官方文档文档传送门 API &amp;amp; 使用MA">
+<meta name="twitter:image" content="https://dongbow.github.io/2019/07/23/mapstruct/mapstruct/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8bean.jpg">
 
 
 
@@ -119,7 +133,7 @@
 
   
   
-  <link rel="canonical" href="https://dongbow.github.io/2019/07/19/linux/">
+  <link rel="canonical" href="https://dongbow.github.io/2019/07/23/mapstruct/">
 
 
 
@@ -130,7 +144,7 @@
 </script>
 
   
-  <title>linux | Smart_咚咚</title>
+  <title>mapstruct简介和使用 | Smart_咚咚</title>
   
 
 
@@ -377,7 +391,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dongbow.github.io/2019/07/19/linux/">
+    <link itemprop="mainEntityOfPage" href="https://dongbow.github.io/2019/07/23/mapstruct/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Smart_咚咚">
@@ -394,7 +408,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">linux
+          <h1 class="post-title" itemprop="name headline">mapstruct简介和使用
 
               
             
@@ -420,7 +434,7 @@
                 
               
 
-              <time title="创建时间：2019-07-19 13:41:10 / 修改时间：15:18:28" itemprop="dateCreated datePublished" datetime="2019-07-19T13:41:10+08:00">2019-07-19</time>
+              <time title="创建时间：2019-07-23 21:21:34 / 修改时间：23:08:18" itemprop="dateCreated datePublished" datetime="2019-07-23T21:21:34+08:00">2019-07-23</time>
             </span>
           
 
@@ -430,6 +444,21 @@
             
           
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mapstruct/" itemprop="url" rel="index"><span itemprop="name">mapstruct</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -464,7 +493,32 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep | zgrep</span><br></pre></td></tr></table></figure>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>mapstrct是一个很好注释处理的框架，解决繁琐domain之间值的转换，节约开发的时间，同时相对应copyProperty的好处是没有使用反射技术，使性能更优。mapstrut一共两个主要的包，org.mapstruct.mapstruct包含里面常用的注释，org.mapstruct.mapstruct-processor处理注释的实现。</p>
+<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="http://mapstruct.org/documentation/stable/reference/html/" target="_blank" rel="noopener">文档传送门</a></p>
+<h2 id="API-amp-使用"><a href="#API-amp-使用" class="headerlink" title="API &amp; 使用"></a>API &amp; 使用</h2><h3 id="MAVEN"><a href="#MAVEN" class="headerlink" title="MAVEN"></a>MAVEN</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定版本 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">org.mapstruct.version</span>&gt;</span>1.3.0.Final<span class="tag">&lt;/<span class="name">org.mapstruct.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 引入依赖 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--mapstruct主键--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mapstruct<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mapstruct<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;org.mapstruct.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- mapstruct插件 可以直接点击查看mapstruct的实现类 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mapstruct<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mapstruct-jdk8<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;org.mapstruct.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- mapstruct实现类执行器 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mapstruct<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mapstruct-processor<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;org.mapstruct.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">scope</span>&gt;</span>private<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ol>
+<li>定义一个接口，并使用<code>@Mapper</code> </li>
+<li>定义一个转换的方法。方法上常用的注解  </li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mapping</span>(target=<span class="string">""</span>,source=<span class="string">""</span>)、</span><br><span class="line"><span class="meta">@Mappings</span>(&#123;<span class="meta">@Mapping</span>(target=<span class="string">""</span>,source=<span class="string">""</span>),<span class="meta">@Mapping</span>(target=<span class="string">""</span>,source=<span class="string">""</span>)&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>ps:如果target和source字段相同的则无需使用注解，mapstruct会自动为我们copy值的</strong><br>方法名称上面如果有个可以忽略自动引入的注解@BeanMapping(ignoreByDefault=true),可以防止target copy source的时候报错<br><img src="./mapstruct/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8bean.jpg" alt="基本使用bean"><br><img src="./mapstruct/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.jpg" alt="基本使用方法"></p>
+<ol start="3">
+<li>类型的转换有三种特殊的  </li>
+</ol>
+<ul>
+<li>常见基本类型的不同，@Mapping会自动转换 </li>
+<li>bean不同的类型的转换 会创建或者调用其他的方法 </li>
+<li>collection类型，如果相同的类型他会重新创建一个新的实例集合，并且赋值，如果不同的则会分开进行赋值。ps:具体的内容请看其他的评论<br><img src="./mapstruct/%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8Bbean.jpg" alt="特殊类型bean"><br><img src="./mapstruct/%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2mapper.jpg" alt="特殊类型转换mapper"><br><img src="./mapstruct/%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB.jpg" alt="接口的实现类">  </li>
+</ul>
+<ol start="4">
+<li>mapstruct可以自定义类型转换，只要入参的类型和返回值于需要的一直，就会自动调用。同时mapstruct的定义不仅仅可以使用接口，也可以使用抽象类。<br><img src="./mapstruct/%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89+%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95.jpg" alt="接口定义+自定义方法"><br><img src="./mapstruct/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%AE%9A%E4%B9%89+%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95.jpg" alt="抽象类定义+自定义方法"><br><img src="./mapstruct/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0.jpg" alt="自定义方法实现"> </li>
+<li>mapstruct支持多个参数的，如果名字一样则会自动映射，不同则需要使用<code>@Mapping</code>，如果多个参数的都有<code>target</code>的属性名需要制定是哪个source的属性名，否则会报错<br><img src="./mapstruct/%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0.jpg" alt="多个参数"><br>mapstruct可以直接将一个基本类型的字段直接映射对应的bean字段<br><img src="./mapstruct/%E9%9D%9Ebean%E7%9A%84%E6%98%A0%E5%B0%84.jpg" alt="非bean的映射"> </li>
+<li>mapstruct可以更新instance，而不是create instance, 使用<code>@MappingTarget</code><br><img src="./mapstruct/updateInstanceMethod.jpg" alt="updateInstanceMethod"><br><img src="./mapstruct/updateInstance.jpg" alt="updateInstance"><br><img src="./mapstruct/updateTest.jpg" alt="updateTest"></li>
+<li></li>
+</ol>
+
       
     </div>
 
@@ -494,7 +548,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/mapstruct/" rel="tag"># mapstruct</a>
           
         </div>
       
@@ -507,8 +561,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/18/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/23/dislock/" rel="next" title="基于Spring AOP的分布式锁简单实现">
+                <i class="fa fa-chevron-left"></i> 基于Spring AOP的分布式锁简单实现
               </a>
             
           </div>
@@ -516,10 +570,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/19/velocity/" rel="prev" title="模板渲染 - Velocity">
-                模板渲染 - Velocity <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,8 +613,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -711,6 +770,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官方文档"><span class="nav-number">2.</span> <span class="nav-text">官方文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-amp-使用"><span class="nav-number">3.</span> <span class="nav-text">API &amp; 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MAVEN"><span class="nav-number">3.1.</span> <span class="nav-text">MAVEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本使用"><span class="nav-number">3.2.</span> <span class="nav-text">基本使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
