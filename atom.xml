@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongbow.github.io/"/>
-  <updated>2019-07-30T11:58:23.000Z</updated>
+  <updated>2019-08-07T06:10:45.000Z</updated>
   <id>https://dongbow.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Collection（二）之 Set.md</title>
+    <link href="https://dongbow.github.io/2019/08/07/collection-1-set-1/"/>
+    <id>https://dongbow.github.io/2019/08/07/collection-1-set-1/</id>
+    <published>2019-08-07T06:08:32.000Z</published>
+    <updated>2019-08-07T06:10:45.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;Set是一个没有重复数据的集合，Guava Set的工具类com.google.common.collect.Sets&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="集合" scheme="https://dongbow.github.io/categories/%E9%9B%86%E5%90%88/"/>
+    
+    
+      <category term="集合" scheme="https://dongbow.github.io/tags/%E9%9B%86%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Collection（一）之接口</title>
+    <link href="https://dongbow.github.io/2019/08/07/collection-1-interface/"/>
+    <id>https://dongbow.github.io/2019/08/07/collection-1-interface/</id>
+    <published>2019-08-07T05:55:32.000Z</published>
+    <updated>2019-08-07T06:06:30.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;collection是Java中非常重要的一个存在，类似一个容器将多个object放入到这个容器，同时也可以以容器为单位进行数据的处理。&lt;br&gt;&lt;strong&gt;ps:写作的jdk版本1.8&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="集合" scheme="https://dongbow.github.io/categories/%E9%9B%86%E5%90%88/"/>
+    
+    
+      <category term="集合" scheme="https://dongbow.github.io/tags/%E9%9B%86%E5%90%88/"/>
+    
+  </entry>
   
   <entry>
     <title>mapstruct简介和使用</title>

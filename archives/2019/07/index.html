@@ -396,7 +396,7 @@
         
           
         
-        嗯..! 目前共计 8 篇日志。 继续努力。
+        嗯..! 目前共计 10 篇日志。 继续努力。
       </span>
       
 
@@ -737,7 +737,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -764,7 +764,9 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -805,7 +807,9 @@
         
           
         
-        <span class="site-state-item-count">12</span>
+          
+        
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1347,6 +1351,26 @@
   
 
   
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'default',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
 
   
 
