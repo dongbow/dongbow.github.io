@@ -98,18 +98,17 @@
   };
 </script>
 
-  <meta name="description" content="防止数据的并发操作出现数据不一致，保证操作是幂等的，我们可以对对象加锁、方法加锁，例如synchronized、ReentrantLock等，但是上述Jdk提供的锁时基于内存的，在分布式环境下是不适用的，那么在分布式环境下该如何实现锁操作呢？分布式环境下需要保证集群中对同一数据、方法等操作状态，所以需要把状态单独存储，分布式锁的实现常用方式是基于缓存或者ZK，常用分布式缓存包括Redis和memc">
-<meta name="keywords" content="分布式锁,Spring AOP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于Spring AOP的分布式锁简单实现">
-<meta property="og:url" content="https://dongbow.github.io/2019/07/23/dislock/index.html">
+  <meta name="description" content="Talk is cheap, show me the code">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Smart_咚咚">
+<meta property="og:url" content="https://dongbow.github.io/categories/线程/index.html">
 <meta property="og:site_name" content="Smart_咚咚">
-<meta property="og:description" content="防止数据的并发操作出现数据不一致，保证操作是幂等的，我们可以对对象加锁、方法加锁，例如synchronized、ReentrantLock等，但是上述Jdk提供的锁时基于内存的，在分布式环境下是不适用的，那么在分布式环境下该如何实现锁操作呢？分布式环境下需要保证集群中对同一数据、方法等操作状态，所以需要把状态单独存储，分布式锁的实现常用方式是基于缓存或者ZK，常用分布式缓存包括Redis和memc">
+<meta property="og:description" content="Talk is cheap, show me the code">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-23T08:17:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于Spring AOP的分布式锁简单实现">
-<meta name="twitter:description" content="防止数据的并发操作出现数据不一致，保证操作是幂等的，我们可以对对象加锁、方法加锁，例如synchronized、ReentrantLock等，但是上述Jdk提供的锁时基于内存的，在分布式环境下是不适用的，那么在分布式环境下该如何实现锁操作呢？分布式环境下需要保证集群中对同一数据、方法等操作状态，所以需要把状态单独存储，分布式锁的实现常用方式是基于缓存或者ZK，常用分布式缓存包括Redis和memc">
+<meta name="twitter:title" content="Smart_咚咚">
+<meta name="twitter:description" content="Talk is cheap, show me the code">
 
 
 
@@ -119,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://dongbow.github.io/2019/07/23/dislock/">
+  <link rel="canonical" href="https://dongbow.github.io/categories/线程/">
 
 
 
@@ -130,7 +129,7 @@
 </script>
 
   
-  <title>基于Spring AOP的分布式锁简单实现 | Smart_咚咚</title>
+  <title>分类: 线程 | Smart_咚咚</title>
   
 
 
@@ -178,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,7 +267,7 @@
         
         
           
-          <li class="menu-item menu-item-categories">
+          <li class="menu-item menu-item-categories menu-item-active">
 
     
     
@@ -357,457 +356,83 @@
           
             
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
           
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block category">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>线程<small>分类</small>
+        </h1>
+      </div>
 
-  
-  
-  
-
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dongbow.github.io/2019/07/23/dislock/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Smart_咚咚">
-      <meta itemprop="description" content="Talk is cheap, show me the code">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smart_咚咚">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+          <a class="post-title-link" href="/2019/08/12/threadlocal/" itemprop="url">
+            
+              <span itemprop="name">ThreadLocal简单理解</span>
+            
+          </a>
         
-          <h1 class="post-title" itemprop="name headline">基于Spring AOP的分布式锁简单实现
+      </h2>
 
-              
-            
-          </h1>
-        
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T16:53:23+08:00" content="2019-08-12">
+          08-12
+        </time>
+      </div>
 
-        <div class="post-meta">
+    </header>
+  </article>
 
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-23 14:50:35 / 修改时间：16:17:53" itemprop="dateCreated datePublished" datetime="2019-07-23T14:50:35+08:00">2019-07-23</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/分布式锁/" itemprop="url" rel="index"><span itemprop="name">分布式锁</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>防止数据的并发操作出现数据不一致，保证操作是幂等的，我们可以对对象加锁、方法加锁，例如synchronized、ReentrantLock等，但是上述Jdk提供的锁时基于内存的，在分布式环境下是不适用的，那么在分布式环境下该如何实现锁操作呢？<br>分布式环境下需要保证集群中对同一数据、方法等操作状态，所以需要把状态单独存储，分布式锁的实现常用方式是基于缓存或者ZK，常用分布式缓存包括Redis和memcached,通过在缓存中设置同一个key和过期时间实现集群中拿到的状态是一致的，ZK是分布式锁实现是基于ZK的临时顺序节点，通过判断同一name下节点是否是最小节点确定是否获取到锁。<br>本文不具体介绍如何实现缓存的写入和删除或者ZK的临时顺序节点创建等实现，主要针对怎么利用Spring AOP消除冗余的if…else,try{}catch(){}等代码，至于为什么，举个正常写一下锁调用的和利用AOP实现的简单对比。  </p>
-<ol>
-<li>正常写法  </li>
-</ol>
-<pre><code class="java"><span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">()</span> </span>{
-
-    <span class="keyword">final</span> String lockKey = <span class="string">"lock_key"</span>;
-
-    <span class="keyword">if</span> (!DistributedLock.getInstance().lock(lockKey, <span class="number">10</span>, TimeUnit.SECONDS)) {
-        <span class="comment">// 没有获取到锁, 返回</span>
-    }
-    <span class="keyword">try</span> {
-        <span class="comment">// 获取到锁, 进行业务逻辑</span>
-        <span class="comment">// ...</span>
-    } <span class="keyword">finally</span> {
-        <span class="comment">// 释放锁</span>
-        DistributedLock.getInstance().unlock(lockKey);
-    }
-
-    <span class="keyword">return</span> <span class="string">"ok"</span>;
-}</code></pre>
-<ol start="2">
-<li>AOP实现   </li>
-</ol>
-<pre><code class="java"><span class="meta">@Lock</span>(prefix=<span class="string">"lock_key"</span>)
-<span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">()</span> </span>{
-    <span class="keyword">return</span> <span class="string">"ok"</span>;
-}</code></pre>
-<p>看上面两个对比，是不是发现下面的写法很简洁，不用重复写相同的代码了，下面们一下具体实现，其实主要是<code>@Lock</code>注解的定义，和利用AOP对注解的拦截  </p>
-<p>@Lock  </p>
-<pre><code class="java"><span class="keyword">package</span> com.github.lock.annotation;
-
-<span class="keyword">import</span> java.lang.annotation.Documented;
-<span class="keyword">import</span> java.lang.annotation.ElementType;
-<span class="keyword">import</span> java.lang.annotation.Retention;
-<span class="keyword">import</span> java.lang.annotation.RetentionPolicy;
-<span class="keyword">import</span> java.lang.annotation.Target;
-
-<span class="comment">/**</span>
-<span class="comment"> * <span class="doctag">@author</span> wangdongbo</span>
-<span class="comment"> * <span class="doctag">@since</span> 2019/7/22.</span>
-<span class="comment"> */</span>
-<span class="meta">@Documented</span>
-<span class="meta">@Target</span>(ElementType.METHOD)
-<span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)
-<span class="keyword">public</span> <span class="meta">@interface</span> Lock {
-
-    <span class="comment">/**</span>
-<span class="comment">     * 锁前缀, 为空时取'classname_method_'</span>
-<span class="comment">     */</span>
-    <span class="function">String <span class="title">prefix</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;
-
-    <span class="comment">/**</span>
-<span class="comment">     * 方法参数名，支持方法中的入参，支持方法参数是对象时对象属性的字段</span>
-<span class="comment">     * 不支持集合/数组参数</span>
-<span class="comment">     */</span>
-    String[] parameter() <span class="keyword">default</span> {};
-
-    <span class="comment">/**</span>
-<span class="comment">     * 锁定时间</span>
-<span class="comment">     */</span>
-    <span class="function"><span class="keyword">int</span> <span class="title">lockSeconds</span><span class="params">()</span> <span class="keyword">default</span> 10</span>;
-
-    <span class="comment">/**</span>
-<span class="comment">     * 是否重试，默认重试</span>
-<span class="comment">     */</span>
-    <span class="function"><span class="keyword">boolean</span> <span class="title">retry</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">true</span></span>;
-
-    <span class="comment">/**</span>
-<span class="comment">     * 重试次数，默认为1，retry为true时可用</span>
-<span class="comment">     */</span>
-    <span class="function"><span class="keyword">int</span> <span class="title">retryCount</span><span class="params">()</span> <span class="keyword">default</span> 1</span>;
-
-    <span class="comment">/**</span>
-<span class="comment">     * 没拿到锁时等待多久后重试，retry为true时可用</span>
-<span class="comment">     */</span>
-    <span class="function"><span class="keyword">int</span> <span class="title">tryLockSeconds</span><span class="params">()</span> <span class="keyword">default</span> 10</span>;
-
-    <span class="comment">/**</span>
-<span class="comment">     * 提示</span>
-<span class="comment">     */</span>
-    <span class="function">String <span class="title">desc</span><span class="params">()</span> <span class="keyword">default</span> "数据正在操作中，请稍后再试"</span>;
-
-}</code></pre>
-<p>LockResolver.java  </p>
-<pre><code class="java"><span class="keyword">package</span> com.github.lock.resolver;
-
-<span class="keyword">import</span> com.github.lock.annotation.Lock;
-<span class="keyword">import</span> com.github.lock.exception.LockException;
-<span class="keyword">import</span> com.github.lock.util.UUIDUtil;
-<span class="keyword">import</span> com.github.lock.way.DistributedLock;
-<span class="keyword">import</span> com.google.common.base.Joiner;
-<span class="keyword">import</span> com.google.common.collect.Lists;
-<span class="keyword">import</span> lombok.extern.slf4j.Slf4j;
-<span class="keyword">import</span> org.apache.commons.lang.ArrayUtils;
-<span class="keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;
-<span class="keyword">import</span> org.aspectj.lang.annotation.Around;
-<span class="keyword">import</span> org.aspectj.lang.annotation.Aspect;
-<span class="keyword">import</span> org.aspectj.lang.annotation.Pointcut;
-<span class="keyword">import</span> org.aspectj.lang.reflect.MethodSignature;
-<span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
-<span class="keyword">import</span> org.springframework.core.LocalVariableTableParameterNameDiscoverer;
-<span class="keyword">import</span> org.springframework.core.annotation.Order;
-<span class="keyword">import</span> org.springframework.stereotype.Component;
-<span class="keyword">import</span> org.springframework.util.StringUtils;
-
-<span class="keyword">import</span> java.lang.reflect.Field;
-<span class="keyword">import</span> java.lang.reflect.Method;
-<span class="keyword">import</span> java.util.List;
-<span class="keyword">import</span> java.util.stream.Stream;
-
-<span class="comment">/**</span>
-<span class="comment"> * <span class="doctag">@author</span> wangdongbo</span>
-<span class="comment"> * <span class="doctag">@since</span> 2019/7/22.</span>
-<span class="comment"> */</span>
-<span class="meta">@Slf</span>4j
-<span class="meta">@Aspect</span>
-<span class="meta">@Order</span>(<span class="number">1</span>)
-<span class="meta">@Component</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LockResolver</span> </span>{
-
-    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DOT = <span class="string">"."</span>;
-    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DOT_SPLIT = <span class="string">"\\."</span>;
-
-    <span class="meta">@Autowired</span>
-    <span class="keyword">private</span> DistributedLock distributedLock;
-
-    <span class="keyword">private</span> <span class="keyword">static</span> LocalVariableTableParameterNameDiscoverer parameterNameDiscoverer = <span class="keyword">new</span> LocalVariableTableParameterNameDiscoverer();
-
-    <span class="meta">@Pointcut</span>(<span class="string">"@annotation(com.github.lock.annotation.Lock)"</span>)
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">lockAspectMethod</span><span class="params">()</span> </span>{ }
-
-    <span class="meta">@Around</span>(<span class="string">"lockAspectMethod()"</span>)
-    <span class="function"><span class="keyword">public</span> Object <span class="title">doAround</span><span class="params">(ProceedingJoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>{
-        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
-        Method method = methodSignature.getMethod();
-        <span class="keyword">if</span> (method == <span class="keyword">null</span>) {
-            <span class="keyword">throw</span> <span class="keyword">new</span> LockException(<span class="string">"method is empty"</span>);
-        }
-        Lock lock = method.getAnnotation(Lock.class);
-        String prefix;
-        <span class="keyword">if</span> (!StringUtils.isEmpty(lock.prefix())) {
-            prefix = lock.prefix();
-        } <span class="keyword">else</span> {
-            prefix = joinPoint.getTarget().getClass().getSimpleName() + <span class="string">"_"</span> + method.getName() + <span class="string">"_"</span>;
-        }
-        String lockKey = prefix + getArgsConcat(method, lock.parameter(), joinPoint.getArgs());
-        String requestId = UUIDUtil.getID();
-        <span class="keyword">try</span> {
-            <span class="keyword">if</span> (lock.retry()) {
-                <span class="keyword">int</span> count = lock.retryCount();
-                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) {
-                    <span class="keyword">if</span> (distributedLock.tryLock(lockKey, requestId, lock.lockSeconds(), lock.tryLockSeconds())) {
-                        <span class="keyword">return</span> joinPoint.proceed();
-                    }
-                }
-            } <span class="keyword">else</span> <span class="keyword">if</span> (distributedLock.lock(lockKey, requestId, lock.lockSeconds())) {
-                <span class="keyword">return</span> joinPoint.proceed();
-            }
-            <span class="keyword">throw</span> <span class="keyword">new</span> LockException(lock.desc());
-        } <span class="keyword">catch</span> (Throwable e) {
-            log.warn(<span class="string">"add lock error:{}"</span>, e.getMessage(), e);
-            <span class="keyword">throw</span> <span class="keyword">new</span> LockException(e.getMessage(), e);
-        } <span class="keyword">finally</span> {
-            distributedLock.unlock(lockKey, requestId);
-        }
-    }
-
-    <span class="function"><span class="keyword">private</span> String <span class="title">getArgsConcat</span><span class="params">(Method method, String[] parameter, Object[] args)</span> </span>{
-        String[] params = parameterNameDiscoverer.getParameterNames(method);
-        <span class="keyword">if</span> (ArrayUtils.isEmpty(parameter)) {
-            <span class="keyword">return</span> <span class="string">""</span>;
-        }
-        List&lt;Object&gt; list = Lists.newArrayListWithCapacity(parameter.length);
-        Stream.of(parameter).forEach(s -&gt; {
-            <span class="keyword">if</span> (s.contains(DOT)) {
-                list.add(parseObj(s, params, args));
-            } <span class="keyword">else</span> {
-                <span class="keyword">int</span> idx = ArrayUtils.indexOf(params, s);
-                list.add(args[idx]);
-            }
-        });
-        <span class="keyword">return</span> Joiner.on(<span class="string">"_"</span>).join(list);
-    }
-
-    <span class="function"><span class="keyword">private</span> Object <span class="title">parseObj</span><span class="params">(String parameter, String[] params, Object[] args)</span> </span>{
-        String firstField = parameter.split(DOT_SPLIT)[<span class="number">0</span>];
-        <span class="keyword">int</span> idx = ArrayUtils.indexOf(params, firstField);
-        Object value = args[idx];
-        Class valueClass = value.getClass();
-        Object[] fields = ArrayUtils.remove(parameter.split(DOT_SPLIT), <span class="number">0</span>);
-        <span class="keyword">for</span> (Object field : fields) {
-            <span class="keyword">try</span> {
-                Field nextField = valueClass.getDeclaredField(String.valueOf(field));
-                nextField.setAccessible(<span class="keyword">true</span>);
-                value = nextField.get(value);
-                valueClass = value.getClass();
-            } <span class="keyword">catch</span> (NoSuchFieldException | IllegalAccessException e) {
-                log.error(e.getMessage(), e);
-            }
-        }
-        <span class="keyword">return</span> value;
-    }
-
-}</code></pre>
-<p>提供一个锁接口，具体可以根据自己的代码实现具体的功能。  </p>
-<p>DistributedLock.java  </p>
-<pre><code class="java"><span class="keyword">package</span> com.github.lock.way;
-
-<span class="comment">/**</span>
-<span class="comment"> * <span class="doctag">@author</span> wangdongbo</span>
-<span class="comment"> * <span class="doctag">@since</span> 2019/7/22.</span>
-<span class="comment"> */</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DistributedLock</span> </span>{
-
-    <span class="comment">/**</span>
-<span class="comment">     * 加锁</span>
-<span class="comment">     *</span>
-<span class="comment">     * <span class="doctag">@param</span> lockKey    key</span>
-<span class="comment">     * <span class="doctag">@param</span> requestId  唯一请求ID</span>
-<span class="comment">     * <span class="doctag">@param</span> seconds    锁定时间[秒]</span>
-<span class="comment">     * <span class="doctag">@return</span> 是否加锁成功</span>
-<span class="comment">     */</span>
-    <span class="function"><span class="keyword">boolean</span> <span class="title">lock</span><span class="params">(String lockKey, String requestId, <span class="keyword">int</span> seconds)</span></span>;
-
-    <span class="comment">/**</span>
-<span class="comment">     * 尝试加锁</span>
-<span class="comment">     *</span>
-<span class="comment">     * <span class="doctag">@param</span> lockKey     key</span>
-<span class="comment">     * <span class="doctag">@param</span> requestId   唯一请求ID</span>
-<span class="comment">     * <span class="doctag">@param</span> seconds     锁定时间[秒]</span>
-<span class="comment">     * <span class="doctag">@param</span> trySeconds  拿不到锁,等待多久之后再次尝试加锁[秒]</span>
-<span class="comment">     * <span class="doctag">@return</span>  是否加锁成功</span>
-<span class="comment">     */</span>
-    <span class="function"><span class="keyword">boolean</span> <span class="title">tryLock</span><span class="params">(String lockKey, String requestId, <span class="keyword">int</span> seconds, <span class="keyword">int</span> trySeconds)</span></span>;
-
-    <span class="comment">/**</span>
-<span class="comment">     * 释放锁</span>
-<span class="comment">     *</span>
-<span class="comment">     * <span class="doctag">@param</span> lockKey    key</span>
-<span class="comment">     * <span class="doctag">@param</span> requestId  唯一请求ID</span>
-<span class="comment">     * <span class="doctag">@return</span>  是否成功释放锁</span>
-<span class="comment">     */</span>
-    <span class="function"><span class="keyword">boolean</span> <span class="title">unlock</span><span class="params">(String lockKey, String requestId)</span></span>;
-
-}</code></pre>
-<p>以上代码就是主要逻辑代码，具体代码实现可以参考工程: <a href="https://github.com/dongbow/lock" target="_blank" rel="noopener">传送门</a></p>
 
       
     </div>
 
-    
-
-    
-      
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-        
-          
-        
-        <div class="post-tags">
-          
-            <a href="/tags/分布式锁/" rel="tag"># 分布式锁</a>
-          
-            <a href="/tags/Spring-AOP/" rel="tag"># Spring AOP</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/07/19/cachedesc/" rel="next" title="缓存简单介绍">
-                <i class="fa fa-chevron-left"></i> 缓存简单介绍
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/23/mapstruct/" rel="prev" title="mapstruct简介和使用">
-                mapstruct简介和使用 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
 
   
 
 
+
+          </div>
+          
 
         </div>
         
@@ -1115,10 +740,6 @@
 
 
   
-  <script src="/js/scrollspy.js?v=7.2.0"></script>
-<script src="/js/post-details.js?v=7.2.0"></script>
-
-
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -1132,8 +753,6 @@
 
   
 
-
-  
 
 
   

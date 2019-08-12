@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongbow.github.io/"/>
-  <updated>2019-08-08T11:22:06.000Z</updated>
+  <updated>2019-08-12T09:51:32.000Z</updated>
   <id>https://dongbow.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ThreadLocal简单理解</title>
+    <link href="https://dongbow.github.io/2019/08/12/threadlocal/"/>
+    <id>https://dongbow.github.io/2019/08/12/threadlocal/</id>
+    <published>2019-08-12T08:53:23.000Z</published>
+    <updated>2019-08-12T09:51:32.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;多线程不可避免需要处理状态，处理状态有三种方式：共享可变性、隔离可变性和纯粹不可变。使用ThreadLocal属于隔离可变性的一种方法，但是ThreadLocal使用不当又可能导致内存泄漏，下面简单介绍一下ThreadLocal。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="线程" scheme="https://dongbow.github.io/categories/%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+      <category term="线程" scheme="https://dongbow.github.io/tags/%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Collection（三）之 List</title>
     <link href="https://dongbow.github.io/2019/08/08/collection-1-list-1/"/>
     <id>https://dongbow.github.io/2019/08/08/collection-1-list-1/</id>
     <published>2019-08-08T11:20:12.000Z</published>
-    <updated>2019-08-08T11:22:06.000Z</updated>
+    <updated>2019-08-08T11:28:37.000Z</updated>
     
     <summary type="html">
     
