@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dongbow.github.io/2019/08/19/mysql-1/</loc>
+    
+    <lastmod>2019-08-19T10:34:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dongbow.github.io/2019/08/12/threadlocal/</loc>
     
-    <lastmod>2019-08-12T09:51:32.000Z</lastmod>
+    <lastmod>2019-08-12T11:09:15.000Z</lastmod>
     
   </url>
   

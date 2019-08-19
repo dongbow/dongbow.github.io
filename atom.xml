@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongbow.github.io/"/>
-  <updated>2019-08-12T09:51:32.000Z</updated>
+  <updated>2019-08-19T10:34:56.000Z</updated>
   <id>https://dongbow.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL - 简单介绍 &amp; 类型</title>
+    <link href="https://dongbow.github.io/2019/08/19/mysql-1/"/>
+    <id>https://dongbow.github.io/2019/08/19/mysql-1/</id>
+    <published>2019-08-19T10:28:42.000Z</published>
+    <updated>2019-08-19T10:34:56.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;SQL简介&quot;&gt;&lt;a href=&quot;#SQL简介&quot; class=&quot;headerlink&quot; title=&quot;SQL简介&quot;&gt;&lt;/a&gt;SQL简介&lt;/h3&gt;&lt;p&gt;SQL 是Structure Query Language（结构化查询语言）的缩写，它是使用关系模型的数据库应用语言。SQL的扩展语言有MySQL、SQL Service等。  &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://dongbow.github.io/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://dongbow.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ThreadLocal简单理解</title>
     <link href="https://dongbow.github.io/2019/08/12/threadlocal/"/>
     <id>https://dongbow.github.io/2019/08/12/threadlocal/</id>
     <published>2019-08-12T08:53:23.000Z</published>
-    <updated>2019-08-12T09:51:32.000Z</updated>
+    <updated>2019-08-12T11:09:15.000Z</updated>
     
     <summary type="html">
     
